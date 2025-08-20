@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace DialogueSystem
+{
+    public class DialogueBaseClass : MonoBehaviour
+    {
+        protected IEnumerator WriteText(string input, TMP_Text textHolder, float delay, AudioSource textSound)
+        {
+            textHolder.text = "";
+            for (int i= 0; i < input.Length; i++)
+            {
+                textHolder.text += input[i];
+                textSound.Play();
+                yield return new WaitForSeconds(delay);
+            }
+            yield return new WaitUntil(() => Input.GetMouseButton(0));
+        }
+
+        protected IEnumerator WriteText_noClick(string input, TMP_Text textHolder, float delay, AudioSource textSound)
+        {
+            textHolder.text = "";
+            for (int i = 0; i < input.Length; i++)
+            {
+                textHolder.text += input[i];
+                textSound.Play();
+                yield return new WaitForSeconds(delay);
+            }
+            yield return null;
+        }
+
+
+    }
+}
