@@ -1,7 +1,7 @@
 # Commercial Fishing
 **PLAY ON WEB HERE** <br>
 https://ducktran.itch.io/commercial-fishing <br><br>
-GAME JAM RATINGS PAGE <br>
+**GAME JAM RATINGS PAGE** <br>
 https://itch.io/jam/mini-code-for-a-cause/rate/3590032 <br>
 <br>
 # About Game
